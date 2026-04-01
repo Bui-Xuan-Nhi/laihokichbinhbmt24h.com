@@ -17,6 +17,28 @@ const Phone = {
     },
 };
 
+// Tự động điền địa chỉ từ CONFIG – chỉ sửa config.js là xong
+const Address = {
+    init() {
+        // js-address-full  → "Nguyễn Tất Thành, TP. Buôn Ma Thuột, Đắk Lắk"
+        document.querySelectorAll('.js-address-full').forEach(el => {
+            el.textContent = CONFIG.addressFull;
+        });
+        // js-address-short → "TP. Buôn Ma Thuột, Đắk Lắk"
+        document.querySelectorAll('.js-address-short').forEach(el => {
+            el.textContent = CONFIG.addressShort;
+        });
+        // js-address-city  → "TP. Buôn Ma Thuột"
+        document.querySelectorAll('.js-address-city').forEach(el => {
+            el.textContent = CONFIG.addressCity;
+        });
+        // js-address-province → "Đắk Lắk"
+        document.querySelectorAll('.js-address-province').forEach(el => {
+            el.textContent = CONFIG.addressProvince;
+        });
+    },
+};
+
 const Header = {
     header: null,
 
@@ -144,6 +166,7 @@ const ActiveNavLink = {
 
 document.addEventListener('DOMContentLoaded', () => {
     Phone.init();
+    Address.init();
     Header.init();
     MobileMenu.init();
     FadeIn.init();
