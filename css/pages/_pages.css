@@ -1,0 +1,624 @@
+/* === Pages: Inner (About, Service, News, Contact) === */
+
+/* ─── PAGE HERO – banner trong mọi inner page ─── */
+.page-hero {
+    position: relative;
+    height: 360px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding-top: var(--header-h);  /* đẩy content xuống khỏi header fixed */
+}
+
+.page-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(17, 24, 39, 0.85) 0%,
+        rgba(17, 24, 39, 0.40) 100%
+    );
+    z-index: 1;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: var(--sp-xl) var(--sp-md);
+}
+
+.page-hero__title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-sm);
+}
+
+.page-hero__title span {
+    color: var(--clr-brand);
+}
+
+.page-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    font-size: var(--fs-sm);
+    color: var(--clr-white-faint);
+}
+
+.page-hero__breadcrumb a {
+    color: var(--clr-brand-light);
+    transition: var(--t-fast);
+}
+
+.page-hero__breadcrumb a:hover {
+    color: var(--clr-brand);
+}
+
+/* ─── ABOUT: giới thiệu 2 cột ─── */
+.about-intro {
+    padding: var(--sp-3xl) var(--sp-md);
+    background-color: var(--clr-bg);
+}
+
+.about-intro__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.about-intro__image {
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--sh-md);
+}
+
+.about-intro__image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: var(--t-slow);
+}
+
+.about-intro__image:hover img {
+    transform: scale(1.02);
+}
+
+.about-intro__text p {
+    color: var(--clr-text-muted);
+    line-height: 1.85;
+    margin-bottom: var(--sp-md);
+    font-size: var(--fs-base);
+}
+
+.about-intro__text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ─── CORE VALUES ─── */
+.core-values {
+    background-color: var(--clr-dark);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.core-values__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-lg);
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.value-card {
+    text-align: center;
+    padding: var(--sp-xl) var(--sp-md);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--clr-border-dark);
+    transition: var(--t-base);
+}
+
+.value-card:hover {
+    background-color: rgba(255,255,255,0.05);
+    border-color: rgba(249,115,22,0.35);
+}
+
+.value-card__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--r-lg);
+    background-color: rgba(249,115,22,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--clr-brand);
+    margin: 0 auto var(--sp-md);
+    transition: var(--t-fast);
+}
+
+.value-card:hover .value-card__icon {
+    background-color: var(--clr-brand);
+    color: #fff;
+}
+
+.value-card__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-sm);
+}
+
+.value-card__desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-white-faint);
+    line-height: 1.65;
+}
+
+/* ─── TIMELINE lịch sử ─── */
+.timeline-section {
+    background-color: var(--clr-bg-soft);
+    padding: var(--sp-3xl) var(--sp-md);
+    border-top: 1px solid var(--clr-border);
+}
+
+.timeline {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.timeline__item {
+    display: flex;
+    gap: var(--sp-lg);
+    padding-bottom: var(--sp-xl);
+    position: relative;
+}
+
+.timeline__item::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 44px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--clr-brand), transparent);
+}
+
+.timeline__item:last-child::before {
+    display: none;
+}
+
+.timeline__dot {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background-color: var(--clr-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: var(--fs-xs);
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px var(--clr-brand-muted);
+}
+
+.timeline__body {
+    padding-top: var(--sp-sm);
+}
+
+.timeline__year {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--clr-brand);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--sp-xs);
+}
+
+.timeline__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: var(--sp-xs);
+}
+
+.timeline__desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-text-muted);
+    line-height: 1.65;
+}
+
+/* ─── SERVICE: grid xe + bảng giá ─── */
+.service-intro {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.service-page__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* Bảng giá */
+.price-section {
+    background-color: var(--clr-bg-soft);
+    padding: var(--sp-3xl) var(--sp-md);
+    border-top: 1px solid var(--clr-border);
+}
+
+/* Wrapper cho phép cuộn ngang trên mobile */
+.price-table-wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--sh-sm);
+}
+
+.price-table {
+    width: 100%;
+    min-width: 560px; /* Bảo đảm không vỡ layout khi màn nhỏ */
+    border-collapse: collapse;
+}
+
+.price-table__head {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: var(--clr-dark);
+    color: #fff;
+    padding: var(--sp-md) var(--sp-lg);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    letter-spacing: 0.3px;
+}
+
+.price-table__row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 14px var(--sp-lg);
+    border-bottom: 1px solid var(--clr-border);
+    font-size: var(--fs-sm);
+    background-color: #fff;
+    transition: var(--t-fast);
+    align-items: center;
+}
+
+.price-table__row:last-child {
+    border-bottom: none;
+}
+
+.price-table__row:hover {
+    background-color: var(--clr-brand-muted);
+}
+
+.price-table__price {
+    color: var(--clr-brand);
+    font-weight: 700;
+}
+
+.price-table__row--highlight {
+    background-color: var(--clr-brand-muted);
+    border-left: 3px solid var(--clr-brand);
+}
+
+.price-table__note {
+    text-align: center;
+    color: var(--clr-text-muted);
+    font-size: var(--fs-sm);
+    margin-top: var(--sp-md);
+    font-style: italic;
+}
+
+/* Extra services */
+.extra-services {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.extra-services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* ─── NEWS: grid bài viết ─── */
+.news-page {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+/* ─── CONTACT: 2 cột (info | map) ─── */
+.contact-page {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.contact-page__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    align-items: start;
+}
+
+.contact-map {
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    height: 380px;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--sh-sm);
+    margin-top: var(--sp-xl);
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Liên hệ nhanh cards */
+.contact-quick {
+    background-color: var(--clr-dark);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.contact-quick__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.contact-quick-card {
+    text-align: center;
+    padding: var(--sp-xl) var(--sp-lg);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--clr-border-dark);
+    transition: var(--t-base);
+}
+
+.contact-quick-card:hover {
+    background-color: rgba(255,255,255,0.05);
+    border-color: rgba(249,115,22,0.4);
+}
+
+.contact-quick-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(249,115,22,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--clr-brand);
+    margin: 0 auto var(--sp-md);
+    transition: var(--t-fast);
+}
+
+.contact-quick-card:hover .contact-quick-card__icon {
+    background-color: var(--clr-brand);
+    color: #fff;
+}
+
+.contact-quick-card__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-xs);
+}
+
+.contact-quick-card__value {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    color: var(--clr-brand);
+    margin-bottom: var(--sp-xs);
+    transition: var(--t-fast);
+}
+
+.contact-quick-card__value:hover {
+    color: var(--clr-brand-light);
+}
+
+.contact-quick-card__sub {
+    font-size: var(--fs-xs);
+    color: var(--clr-white-faint);
+}
+
+/* ── News card ── */
+.news-page {
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+    margin-top: var(--sp-2xl);
+}
+
+.news-card {
+    background-color: var(--clr-bg);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+    transition: var(--t-base);
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sh-md);
+    border-color: var(--clr-brand);
+}
+
+.news-card__image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.news-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card__image img {
+    transform: scale(1.06);
+}
+
+.news-card__body {
+    padding: var(--sp-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+}
+
+.news-card__date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-xs);
+    color: var(--clr-text-muted);
+}
+
+.news-card__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-text);
+    line-height: 1.45;
+    margin: 0;
+    transition: var(--t-fast);
+}
+
+.news-card:hover .news-card__title {
+    color: var(--clr-brand);
+}
+
+.news-card__excerpt {
+    font-size: var(--fs-sm);
+    color: var(--clr-text-muted);
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--clr-brand);
+    text-decoration: none;
+    transition: var(--t-fast);
+    margin-top: var(--sp-xs);
+}
+
+.news-card__link:hover {
+    gap: 10px;
+    color: var(--clr-brand-dark);
+}
+
+/* ── Feature card (dịch vụ phụ trợ) ── */
+.extra-services {
+    padding: var(--sp-3xl) var(--sp-md);
+    background-color: var(--clr-bg-muted);
+}
+
+.extra-services__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+    margin-top: var(--sp-2xl);
+}
+
+.feature-card {
+    background-color: var(--clr-bg);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--clr-border);
+    padding: var(--sp-xl);
+    text-align: center;
+    transition: var(--t-base);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sh-md);
+    border-color: var(--clr-brand);
+}
+
+.feature-card__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--sp-md);
+    background-color: var(--clr-brand-muted);
+    border-radius: var(--r-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--clr-brand);
+    transition: var(--t-base);
+}
+
+.feature-card:hover .feature-card__icon {
+    background-color: var(--clr-brand);
+    color: #fff;
+}
+
+.feature-card__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: var(--sp-sm);
+}
+
+.feature-card__desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-text-muted);
+    line-height: 1.75;
+}

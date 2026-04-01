@@ -1,0 +1,87 @@
+/* === Biến CSS toàn cục – DakGo 2026 === */
+
+:root {
+    /* ── Màu chủ đạo ── */
+    --clr-brand:        #F97316;   /* cam nổi bật */
+    --clr-brand-dark:   #EA580C;
+    --clr-brand-light:  #FED7AA;
+    --clr-brand-muted:  rgba(249, 115, 22, 0.10);
+    --clr-brand-border: rgba(249, 115, 22, 0.25);
+
+    /* ── Nền ── */
+    --clr-bg:           #FFFFFF;
+    --clr-bg-soft:      #FAFAFA;
+    --clr-bg-muted:     #F4F4F5;
+    --clr-dark:         #111827;   /* nền tối section */
+    --clr-dark-2:       #1F2937;
+    --clr-green:        #1B4332;   /* xanh đậm – gradient CTA */
+    --clr-green-2:      #2D6A4F;
+    --clr-green-3:      #40916C;
+
+    /* ── Chữ ── */
+    --clr-text:         #111827;
+    --clr-text-2:       #374151;
+    --clr-text-muted:   #6B7280;
+    --clr-text-light:   #9CA3AF;
+    --clr-white:        #FFFFFF;
+    --clr-white-dim:    rgba(255,255,255,0.72);
+    --clr-white-faint:  rgba(255,255,255,0.40);
+
+    /* ── Border ── */
+    --clr-border:       #E5E7EB;
+    --clr-border-dark:  rgba(255,255,255,0.10);
+
+    /* ── Zalo ── */
+    --clr-zalo:         #0068FF;
+
+    /* ── Stars ── */
+    --clr-stars:        #F59E0B;
+
+    /* ── Font ── */
+    --font:             'Inter', sans-serif;
+    --fs-xs:            0.75rem;     /* 12px */
+    --fs-sm:            0.875rem;    /* 14px */
+    --fs-base:          1rem;        /* 16px */
+    --fs-md:            1.125rem;    /* 18px */
+    --fs-lg:            1.375rem;    /* 22px */
+    --fs-xl:            1.625rem;    /* 26px */
+    --fs-2xl:           2rem;        /* 32px */
+    --fs-3xl:           2.5rem;      /* 40px */
+
+    /* ── Spacing ── */
+    --sp-xs:   4px;
+    --sp-sm:   8px;
+    --sp-md:   16px;
+    --sp-lg:   24px;
+    --sp-xl:   36px;
+    --sp-2xl:  56px;
+    --sp-3xl:  88px;
+
+    /* ── Radius ── */
+    --r-sm:    6px;
+    --r-md:    10px;
+    --r-lg:    16px;
+    --r-xl:    24px;
+    --r-pill:  999px;
+
+    /* ── Shadow ── */
+    --sh-xs:   0 1px 3px rgba(0,0,0,0.06);
+    --sh-sm:   0 2px 8px rgba(0,0,0,0.08);
+    --sh-md:   0 4px 20px rgba(0,0,0,0.10);
+    --sh-lg:   0 8px 32px rgba(0,0,0,0.12);
+
+    /* ── Transition ── */
+    --t-fast:  all 0.2s ease;
+    --t-base:  all 0.3s ease;
+    --t-slow:  all 0.5s ease;
+
+    /* ── Layout ── */
+    --max-w:          1100px;
+    --header-h:       70px;
+
+    /* ── Z-index ── */
+    --z-header:  100;
+    --z-overlay: 500;
+    --z-menu:    600;
+    --z-float:   998;
+}

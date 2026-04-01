@@ -1,0 +1,30 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "quoteProps": "as-needed",
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf",
+    "htmlWhitespaceInsensitivity": "css",
+    "embeddedLanguageFormatting": "auto",
+    "overrides": [
+        {
+            "files": "*.css",
+            "options": {
+                "singleQuote": false,
+                "printWidth": 100
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "printWidth": 140,
+                "singleQuote": false
+            }
+        }
+    ]
+}

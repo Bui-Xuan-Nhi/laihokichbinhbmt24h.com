@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch vụ taxi Lái Hộ BMT – Xe 4 chỗ, 7 chỗ, 9 chỗ tại Buôn Mê Thuột. Bảng giá cước minh bạch, đặt xe 24/7, đưa đón sân bay, xe hợp đồng.">
+    <title>Dịch vụ – Lái Hộ BMT – Taxi Buôn Mê Thuột</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <nav class="header__nav" aria-label="Menu chính">
+        <a class="header__logo" href="../index.html">
+            <div class="header__logo-icon" aria-hidden="true">
+                <i class="fa-solid fa-taxi"></i>
+            </div>
+            <span class="header__logo-text">Lái Hộ <span>BMT</span></span>
+        </a>
+        <ul class="header__menu" role="menubar">
+            <li class="header__menu-item" role="none">
+                <a class="header__menu-link" href="../index.html" role="menuitem">Trang chủ</a>
+            </li>
+            <li class="header__menu-item" role="none">
+                <a class="header__menu-link" href="./about.html" role="menuitem">Giới thiệu</a>
+            </li>
+            <li class="header__menu-item" role="none">
+                <a class="header__menu-link header__menu-link--active" href="./service.html" role="menuitem">Dịch vụ</a>
+            </li>
+            <li class="header__menu-item" role="none">
+                <a class="header__menu-link" href="./news.html" role="menuitem">Tin tức</a>
+            </li>
+            <li class="header__menu-item" role="none">
+                <a class="header__menu-link" href="./contact.html" role="menuitem">Liên hệ</a>
+            </li>
+        </ul>
+        <a class="header__hotline js-phone-link" href="tel:0900000000" aria-label="Gọi hotline">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span class="js-phone-text">0900 000 000</span>
+        </a>
+        <button
+            class="header__hamburger"
+            type="button"
+            aria-label="Mở menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            <span class="header__hamburger-line"></span>
+            <span class="header__hamburger-line"></span>
+            <span class="header__hamburger-line"></span>
+        </button>
+    </nav>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Menu di động">
+    <div class="mobile-menu__header">
+        <div class="mobile-menu__brand">
+            <div class="mobile-menu__brand-icon" aria-hidden="true">
+                <i class="fa-solid fa-taxi"></i>
+            </div>
+            Lái Hộ <span>BMT</span>
+        </div>
+        <button class="mobile-menu__close" type="button" aria-label="Đóng menu">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div class="mobile-menu__nav">
+        <a class="mobile-menu__link" href="../index.html">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            Trang chủ
+        </a>
+        <a class="mobile-menu__link" href="./about.html">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            Giới thiệu
+        </a>
+        <a class="mobile-menu__link mobile-menu__link--active" href="./service.html">
+            <i class="fa-solid fa-taxi" aria-hidden="true"></i>
+            Dịch vụ
+        </a>
+        <a class="mobile-menu__link" href="./news.html">
+            <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+            Tin tức
+        </a>
+        <a class="mobile-menu__link" href="./contact.html">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            Liên hệ
+        </a>
+    </div>
+    <div class="mobile-menu__footer">
+        <a class="mobile-menu__hotline js-phone-link" href="tel:0900000000" aria-label="Gọi hotline">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <span class="js-phone-text">0900 000 000</span>
+        </a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <div class="page-hero__bg" aria-hidden="true">
+            <img
+                src="../assets/images/banner-service.jpg"
+                alt=""
+                loading="eager">
+        </div>
+        <div class="page-hero__overlay" aria-hidden="true"></div>
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Dịch vụ <span>Lái Hộ BMT</span></h1>
+            <nav class="page-hero__breadcrumb" aria-label="Đường dẫn">
+                <a href="../index.html">Trang chủ</a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                <span aria-current="page">Dịch vụ</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===== LOẠI XE ===== -->
+    <section class="service-intro" aria-labelledby="service-title">
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <div class="section-heading section-heading--center fade-in">
+                <div class="badge">Đội xe</div>
+                <h2 class="section-heading__title" id="service-title">Lựa chọn xe phù hợp với bạn</h2>
+                <p class="section-heading__sub">
+                    Mỗi loại xe được thiết kế để phù hợp với từng nhu cầu di chuyển –
+                    từ cá nhân đến gia đình, nhóm bạn.
+                </p>
+            </div>
+
+            <div class="service-page__grid">
+                <article class="car-card fade-in">
+                    <div class="car-card__image">
+                        <img
+                            src="../assets/images/taxi-4-cho.jpg"
+                            alt="Taxi 4 chỗ Lái Hộ BMT – lý tưởng di chuyển nội thành Buôn Mê Thuột"
+                            loading="lazy">
+                    </div>
+                    <div class="car-card__body">
+                        <h2 class="car-card__title">Taxi 4 chỗ</h2>
+                        <p class="car-card__desc">
+                            Tiết kiệm, nhanh gọn cho 1–3 hành khách. Phù hợp đi làm,
+                            di chuyển nội thành, đón sân bay hay gặp đối tác.
+                        </p>
+                        <span class="car-card__price">Từ 10.000đ / km</span>
+                        <a class="btn btn--primary btn--full js-phone-link" href="tel:0900000000">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            Đặt xe ngay
+                        </a>
+                    </div>
+                </article>
+
+                <article class="car-card fade-in">
+                    <div class="car-card__image">
+                        <img
+                            src="../assets/images/taxi-7-cho.jpg"
+                            alt="Taxi 7 chỗ Lái Hộ BMT – thoải mái cho gia đình và nhóm nhỏ"
+                            loading="lazy">
+                    </div>
+                    <div class="car-card__body">
+                        <h2 class="car-card__title">Taxi 7 chỗ</h2>
+                        <p class="car-card__desc">
+                            Rộng rãi cho 4–6 người. Lý tưởng cho gia đình đi du lịch
+                            Buôn Đôn, Hồ Lắk, thác Đray Sáp hoặc di chuyển liên tỉnh.
+                        </p>
+                        <span class="car-card__price">Từ 13.000đ / km</span>
+                        <a class="btn btn--primary btn--full js-phone-link" href="tel:0900000000">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            Đặt xe ngay
+                        </a>
+                    </div>
+                </article>
+
+                <article class="car-card fade-in">
+                    <div class="car-card__image">
+                        <img
+                            src="../assets/images/taxi-9-cho.jpg"
+                            alt="Taxi 9 chỗ Lái Hộ BMT – phù hợp nhóm đông và tour du lịch"
+                            loading="lazy">
+                    </div>
+                    <div class="car-card__body">
+                        <h2 class="car-card__title">Taxi 9 chỗ</h2>
+                        <p class="car-card__desc">
+                            Hoàn hảo cho đoàn 7–8 người. Khám phá Tây Nguyên,
+                            tour dài ngày hoặc xe hợp đồng sự kiện.
+                        </p>
+                        <span class="car-card__price">Từ 15.000đ / km</span>
+                        <a class="btn btn--primary btn--full js-phone-link" href="tel:0900000000">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            Đặt xe ngay
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BẢNG GIÁ ===== -->
+    <section class="price-section" aria-labelledby="price-title">
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <div class="section-heading section-heading--center fade-in">
+                <div class="badge">Bảng giá</div>
+                <h2 class="section-heading__title" id="price-title">
+                    Giá cước minh bạch – Không phụ thu ẩn
+                </h2>
+                <p class="section-heading__sub">
+                    Tất cả mức giá đã bao gồm cước phí, không có phí phát sinh.
+                    Báo giá cố định trước mỗi chuyến đi.
+                </p>
+            </div>
+
+            <div class="price-table-wrap fade-in">
+                <div class="price-table" role="table" aria-label="Bảng giá cước Lái Hộ BMT">
+                <div class="price-table__head" role="row">
+                    <div role="columnheader">Dịch vụ / Hành trình</div>
+                    <div role="columnheader">Xe 4 chỗ</div>
+                    <div role="columnheader">Xe 7 chỗ</div>
+                    <div role="columnheader">Xe 9 chỗ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Mở đồng hồ (1 km đầu)</div>
+                    <div class="price-table__price" role="cell">15.000đ</div>
+                    <div class="price-table__price" role="cell">20.000đ</div>
+                    <div class="price-table__price" role="cell">25.000đ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Mỗi km tiếp theo</div>
+                    <div class="price-table__price" role="cell">10.000đ</div>
+                    <div class="price-table__price" role="cell">13.000đ</div>
+                    <div class="price-table__price" role="cell">15.000đ</div>
+                </div>
+                <div class="price-table__row price-table__row--highlight" role="row">
+                    <div role="cell">
+                        <strong>Đưa đón sân bay BMT</strong>
+                        <br>
+                        <span style="font-size:0.8rem;color:var(--clr-text-light);">Trong bán kính 20km</span>
+                    </div>
+                    <div class="price-table__price" role="cell">150.000đ</div>
+                    <div class="price-table__price" role="cell">200.000đ</div>
+                    <div class="price-table__price" role="cell">250.000đ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Tour Buôn Đôn (1 ngày)</div>
+                    <div class="price-table__price" role="cell">600.000đ</div>
+                    <div class="price-table__price" role="cell">800.000đ</div>
+                    <div class="price-table__price" role="cell">1.000.000đ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Tour Hồ Lắk (1 ngày)</div>
+                    <div class="price-table__price" role="cell">700.000đ</div>
+                    <div class="price-table__price" role="cell">900.000đ</div>
+                    <div class="price-table__price" role="cell">1.100.000đ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Đắk Lắk – Đà Lạt</div>
+                    <div class="price-table__price" role="cell">1.200.000đ</div>
+                    <div class="price-table__price" role="cell">1.600.000đ</div>
+                    <div class="price-table__price" role="cell">2.000.000đ</div>
+                </div>
+                <div class="price-table__row" role="row">
+                    <div role="cell">Đắk Lắk – TP.HCM</div>
+                    <div class="price-table__price" role="cell">2.800.000đ</div>
+                    <div class="price-table__price" role="cell">3.500.000đ</div>
+                    <div class="price-table__price" role="cell">4.200.000đ</div>
+                </div>
+            </div><!-- end price-table -->
+            </div><!-- end price-table-wrap -->
+            <p class="price-table__note">
+                * Giá có thể thay đổi theo quãng đường thực tế. Vui lòng liên hệ để được báo giá chính xác.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== DỊCH VỤ PHỤ TRỢ ===== -->
+    <section class="extra-services" aria-labelledby="extra-title">
+        <div style="max-width: var(--max-w); margin: 0 auto;">
+            <div class="section-heading section-heading--center fade-in">
+                <div class="badge">Thêm dịch vụ</div>
+                <h2 class="section-heading__title" id="extra-title">Giải pháp di chuyển toàn diện</h2>
+                <p class="section-heading__sub">
+                    Ngoài taxi thông thường, Lái Hộ BMT còn cung cấp nhiều dịch vụ chuyên biệt khác.
+                </p>
+            </div>
+
+            <div class="extra-services__grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                    </div>
+                    <h3 class="feature-card__title">Đưa đón sân bay</h3>
+                    <p class="feature-card__desc">
+                        Đón tận nơi, đúng giờ bay. Theo dõi chuyến bay thực tế,
+                        không tính phí chờ nếu trễ chuyến.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="feature-card__title">Xe hợp đồng</h3>
+                    <p class="feature-card__desc">
+                        Thuê xe theo ngày, tuần, tháng. Phù hợp doanh nghiệp,
+                        sự kiện, đoàn công tác với giá ưu đãi.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <h3 class="feature-card__title">Tour Tây Nguyên</h3>
+                    <p class="feature-card__desc">
+                        Khám phá Buôn Đôn, Hồ Lắk, thác Đray Sáp.
+                        Tài xế kiêm hướng dẫn địa phương.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner" aria-label="Đặt xe ngay">
+    <div class="cta-banner__inner fade-in">
+        <h2 class="cta-banner__title">
+            Sẵn sàng đặt xe chưa?<br>
+            <span>Gọi ngay – Xe đến trong 5 phút!</span>
+        </h2>
+        <p class="cta-banner__desc">Phục vụ 24/7 &nbsp;·&nbsp; Giá rẻ &nbsp;·&nbsp; Tài xế uy tín &nbsp;·&nbsp; Toàn tỉnh Đắk Lắk</p>
+        <div class="cta-banner__btns">
+            <a class="btn btn--primary btn--lg js-phone-link" href="tel:0900000000">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span class="js-phone-text">0900 000 000</span>
+            </a>
+            <a
+                class="btn btn--outline-white btn--lg js-zalo-link"
+                href="https://zalo.me/0900000000"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
+                Chat Zalo
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+    <div class="footer__main">
+        <div class="footer__grid">
+
+            <!-- Cột 1: Thương hiệu -->
+            <div class="footer__brand">
+                <a class="header__logo" href="../index.html">
+                    <div class="header__logo-icon" aria-hidden="true">
+                        <i class="fa-solid fa-taxi"></i>
+                    </div>
+                    <span class="header__logo-text">Lái Hộ <span>BMT</span></span>
+                </a>
+                <p class="footer__brand-desc">
+                    Dịch vụ taxi uy tín hàng đầu tại Buôn Mê Thuột &amp; toàn tỉnh Đắk Lắk.
+                    Nhanh chóng – An toàn – Minh bạch – Phục vụ 24/7.
+                </p>
+                <div class="footer__hours">
+                    <span class="footer__hours-badge">
+                        <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                        Đang hoạt động
+                    </span>
+                    <p class="footer__hours-text">Thứ 2 – Chủ nhật: 24/7<br>Kể cả ngày lễ &amp; Tết</p>
+                </div>
+                <div class="footer__socials">
+                    <a class="footer__social-btn" href="#" title="Facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="footer__social-btn" href="#" title="TikTok" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a
+                        class="footer__social-btn js-zalo-link"
+                        href="https://zalo.me/0900000000"
+                        title="Zalo"
+                        aria-label="Zalo"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </a>
+                    <a class="footer__social-btn" href="#" title="YouTube" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cột 2: Dịch vụ -->
+            <div class="footer__col">
+                <h3 class="footer__col-title">Dịch vụ</h3>
+                <ul class="footer__col-list" role="list">
+                    <li>
+                        <a href="./service.html">
+                            <i class="fa-solid fa-car" aria-hidden="true"></i>
+                            Taxi 4 chỗ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./service.html">
+                            <i class="fa-solid fa-van-shuttle" aria-hidden="true"></i>
+                            Taxi 7 chỗ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./service.html">
+                            <i class="fa-solid fa-bus" aria-hidden="true"></i>
+                            Taxi 9 chỗ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./service.html">
+                            <i class="fa-solid fa-plane-arrival" aria-hidden="true"></i>
+                            Đưa đón sân bay
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./service.html">
+                            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+                            Xe hợp đồng
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Khu vực -->
+            <div class="footer__col">
+                <h3 class="footer__col-title">Khu vực</h3>
+                <ul class="footer__col-list" role="list">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            TP. Buôn Mê Thuột
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Sân bay BMT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Huyện Cư M'gar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Huyện Krông Pắk
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Toàn tỉnh Đắk Lắk
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cột 4: Liên hệ -->
+            <div class="footer__col">
+                <h3 class="footer__col-title">Liên hệ</h3>
+                <ul class="footer__col-list footer__contact" role="list">
+                    <li class="footer__contact-item">
+                        <span class="footer__contact-icon" aria-hidden="true">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span>
+                            Hotline 24/7<br>
+                            <a class="footer__contact-highlight js-phone-link" href="tel:0900000000">
+                                <span class="js-phone-text">0900 000 000</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <span class="footer__contact-icon" aria-hidden="true">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </span>
+                        <span>
+                            Chat Zalo<br>
+                            <a
+                                class="footer__contact-highlight js-zalo-link"
+                                href="https://zalo.me/0900000000"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="js-phone-text">0900 000 000</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <span class="footer__contact-icon" aria-hidden="true">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <span>info@laihobmt.com</span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <span class="footer__contact-icon" aria-hidden="true">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <span>TP. Buôn Mê Thuột, Đắk Lắk</span>
+                    </li>
+                    <li class="footer__contact-item">
+                        <span class="footer__contact-icon" aria-hidden="true">
+                            <i class="fa-solid fa-clock"></i>
+                        </span>
+                        <span>Hoạt động 24/7, kể cả lễ tết</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Copyright bar -->
+    <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+            <p>© 2026 <strong>Lái Hộ BMT</strong> – Taxi Buôn Mê Thuột</p>
+            <ul class="footer__bottom-links" role="list">
+                <li><a href="./about.html">Giới thiệu</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+            <p class="footer__bottom-made">Powered by <span>Lái hộ BMT</span></p>
+        </div>
+    </div>
+
+</footer>
+
+<div class="float-contact" aria-label="Liên hệ nhanh">
+    <a
+        class="float-contact__btn float-contact__btn--zalo js-zalo-link"
+        href="https://zalo.me/0900000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat Zalo">
+        <i class="fa-solid fa-comment-dots"></i>
+    </a>
+    <a
+        class="float-contact__btn float-contact__btn--phone float-contact__btn--pulse js-phone-link"
+        href="tel:0900000000"
+        aria-label="Gọi điện ngay">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

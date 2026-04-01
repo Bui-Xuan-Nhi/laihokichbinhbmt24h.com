@@ -1,0 +1,169 @@
+/* ======================================================
+   Component: CTA Banner – dùng chung cho tất cả các trang
+   Đặt trước <footer> để tạo khối kêu gọi hành động cuối trang
+   ====================================================== */
+
+/* ── Wrapper chính ── */
+.cta-banner {
+    position: relative;
+    padding: 96px var(--sp-md);
+    text-align: center;
+    overflow: hidden;
+
+    /* Nền tối gradient, tách biệt với footer */
+    background: linear-gradient(
+        160deg,
+        var(--clr-green) 0%,
+        #0D1B0F 55%,
+        var(--clr-dark) 100%
+    );
+}
+
+/* Hào quang cam phía trên */
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 380px;
+    background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(245, 166, 35, 0.2) 0%,
+        transparent 65%
+    );
+    pointer-events: none;
+}
+
+/* Đường kẻ sáng phía trên – ngăn cách với nội dung trên */
+.cta-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: var(--clr-brand);
+    border-radius: var(--r-pill);
+}
+
+/* ── Inner wrapper ── */
+.cta-banner__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ── Badge nhỏ phía trên tiêu đề ── */
+.cta-banner__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-xs);
+    padding: 5px 16px;
+    background: var(--clr-brand-muted);
+    border: 1px solid var(--clr-brand-border);
+    border-radius: var(--r-pill);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--clr-brand);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: var(--sp-md);
+}
+
+/* ── Tiêu đề lớn ── */
+.cta-banner__title {
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: var(--sp-md);
+    letter-spacing: -0.5px;
+}
+
+.cta-banner__title span {
+    color: var(--clr-brand);
+}
+
+/* ── Mô tả ── */
+.cta-banner__desc {
+    color: var(--clr-white-dim);
+    font-size: var(--fs-md);
+    line-height: 1.75;
+    margin-bottom: var(--sp-xl);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Thanh thông tin nhanh ── */
+.cta-banner__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-xl);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-xl);
+    padding: var(--sp-md) var(--sp-lg);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--r-lg);
+}
+
+.cta-banner__stat {
+    text-align: center;
+}
+
+.cta-banner__stat-num {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--clr-brand);
+    line-height: 1;
+}
+
+.cta-banner__stat-label {
+    font-size: var(--fs-xs);
+    color: var(--clr-white-faint);
+    margin-top: var(--sp-xs);
+}
+
+/* Separator dọc giữa các stat */
+.cta-banner__stat + .cta-banner__stat {
+    position: relative;
+    padding-left: var(--sp-xl);
+}
+
+.cta-banner__stat + .cta-banner__stat::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Nhóm nút ── */
+.cta-banner__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-md);
+    flex-wrap: wrap;
+}
+
+/* ── Ghi chú dưới nút ── */
+.cta-banner__note {
+    margin-top: var(--sp-md);
+    font-size: var(--fs-xs);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-banner__note i {
+    color: var(--clr-brand);
+    margin-right: 4px;
+}

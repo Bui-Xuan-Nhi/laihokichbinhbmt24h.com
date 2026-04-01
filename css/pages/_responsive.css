@@ -1,0 +1,358 @@
+/* === Responsive – Mobile-first === */
+
+/* ── Tablet nhỏ >= 576px ── */
+@media (min-width: 576px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .core-values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .extra-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-quick__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Desktop >= 992px ── */
+@media (min-width: 992px) {
+    .header__hamburger {
+        display: none;
+    }
+
+    .header__menu {
+        display: flex;
+    }
+
+    .header__hotline {
+        display: flex;
+    }
+
+    /* News 3 cột */
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Extra services 3 cột */
+    .extra-services__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Core values 4 cột */
+    .core-values__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Service page 3 cột */
+    .service-page__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact quick 3 cột */
+    .contact-quick__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Contact page 2 cột */
+    .contact-page__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ════════════════════════════════════════
+   Thu hẹp – Max-width breakpoints
+════════════════════════════════════════ */
+
+/* ── Tablet: < 992px ── */
+@media (max-width: 991px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__hotline {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    /* Hero 1 cột, card ẩn */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        padding: 110px 0 80px;
+    }
+
+    .hero__card {
+        display: none;
+    }
+
+    /* Services 2 cột */
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why 1 cột */
+    .why__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .why__stats-grid {
+        position: static;
+    }
+
+    /* How-it-works 2 cột */
+    .how-it-works__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Area 1 cột – bản đồ lên trên */
+    .area__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Reviews 2 cột */
+    .reviews__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About intro 1 cột */
+    .about-intro__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Core values 2 cột */
+    .core-values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service page 2 cột */
+    .service-page__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Extra services 2 cột */
+    .extra-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact 1 cột */
+    .contact-page__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Quick contact 2 cột */
+    .contact-quick__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* News 2 cột */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer 2 cột */
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer CTA xếp dọc */
+    .footer__cta-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__cta-actions {
+        justify-content: center;
+    }
+
+    /* Price table wrapper cuộn ngang */
+    .price-table-wrap {
+        border-radius: var(--r-md);
+    }
+
+/* ── Mobile: < 576px ── */
+@media (max-width: 575px) {
+
+    /* ─ Hero ─ */
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero__inner {
+        padding: 100px var(--sp-md) 60px;
+    }
+
+    .hero__title {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+    }
+
+    /* Nút hero xếp dọc, full width */
+    .hero__btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: var(--sp-md);
+    }
+
+    .hero__stat-item {
+        flex: 1 1 auto;
+        min-width: 80px;
+    }
+
+    /* ─ Trusted bar: marquee tự chạy, không cần cuộn ─ */
+    .trusted-bar__track {
+        animation-duration: 20s; /* nhanh hơn trên mobile */
+    }
+
+    /* ─ Services 1 cột ─ */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ Why stats 2 cột nhỏ ─ */
+    .why__stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ─ How-it-works 1 cột ─ */
+    .how-it-works__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ Area zones 2 cột ─ */
+    .area__zones {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Vùng phục vụ: 2 button xếp dọc, chiều rộng bằng nhau */
+    .area__cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .area__cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ─ Reviews 1 cột ─ */
+    .reviews__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ CTA banner: nút dọc, full width ─ */
+    .cta-banner__btns {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .cta-banner__btns .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ─ Core values 1 cột ─ */
+    .core-values__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ Service page 1 cột ─ */
+    .service-page__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .extra-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ Contact quick 1 cột ─ */
+    .contact-quick__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ News 1 cột ─ */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─ Footer 1 cột ─ */
+    .footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__brand-desc {
+        max-width: 100%;
+    }
+
+    .footer__bottom-inner {
+        flex-direction: column;
+        gap: var(--sp-sm);
+        text-align: center;
+    }
+
+    .footer__bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--sp-md);
+    }
+
+    /* ─ Page hero nhỏ hơn ─ */
+    .page-hero {
+        height: 240px;
+    }
+
+    .page-hero__title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    /* ─ About timeline: thu nhỏ ─ */
+    .timeline__item {
+        padding-left: 44px;
+    }
+
+    .timeline__dot {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+        left: -14px;
+    }
+
+    /* ─ Price table cuộn ngang trên màn nhỏ ─ */
+    .price-table-wrap {
+        border-radius: var(--r-sm);
+    }
+    .price-table {
+        min-width: 500px;
+    }
+
+    /* ─ Contact form padding ─ */
+    .contact-page__form {
+        padding: var(--sp-lg);
+    }
+
+    /* ─ Nút toàn cục trên mobile: không nhỏ hơn text ─ */
+    .btn--lg {
+        padding: 14px var(--sp-xl);
+        font-size: var(--fs-base);
+    }
+}

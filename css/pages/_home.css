@@ -1,0 +1,403 @@
+/* === Page: Home === */
+
+/* ─── HERO: ảnh nền full + overlay tối + chữ trắng ─── */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 var(--sp-md);
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        rgba(17, 24, 39, 0.90) 0%,
+        rgba(17, 24, 39, 0.55) 55%,
+        rgba(17, 24, 39, 0.25) 100%
+    );
+    z-index: 1;
+}
+
+.hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    width: 100%;
+    padding: 140px 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Cột trái – text */
+.hero__text {
+    max-width: 580px;
+}
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-sm);
+    background-color: rgba(249,115,22,0.18);
+    color: var(--clr-brand-light);
+    border: 1px solid rgba(249,115,22,0.35);
+    border-radius: var(--r-pill);
+    padding: 6px 16px;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: var(--sp-lg);
+}
+
+.hero__title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.12;
+    margin-bottom: var(--sp-lg);
+}
+
+.hero__title span {
+    color: var(--clr-brand);
+}
+
+.hero__desc {
+    color: var(--clr-white-dim);
+    font-size: var(--fs-md);
+    line-height: 1.75;
+    margin-bottom: var(--sp-xl);
+    max-width: 480px;
+}
+
+.hero__btns {
+    display: flex;
+    gap: var(--sp-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-xl);
+}
+
+/* Stats bar */
+.hero__stats {
+    display: flex;
+    gap: var(--sp-xl);
+    padding-top: var(--sp-xl);
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.hero__stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero__stat-num {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--clr-brand);
+    line-height: 1;
+}
+
+.hero__stat-label {
+    font-size: var(--fs-xs);
+    color: var(--clr-white-faint);
+}
+
+/* Cột phải – quick-contact card */
+.hero__card {
+    background-color: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--r-xl);
+    padding: var(--sp-xl) var(--sp-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-lg);
+}
+
+.hero__card-title {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.hero__card-title span {
+    color: var(--clr-brand);
+}
+
+.hero__card-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm);
+}
+
+.hero__card-label {
+    font-size: var(--fs-xs);
+    color: var(--clr-white-faint);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero__card-value {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero__card-divider {
+    height: 1px;
+    background-color: rgba(255,255,255,0.12);
+}
+
+/* ─── TRUSTED BAR: dải nền tối, icon + text ─── */
+/* ─── TRUSTED BAR: marquee scroll liên tục ─── */
+.trusted-bar {
+    background-color: var(--clr-dark-2);
+    padding: 14px 0;
+    overflow: hidden;       /* cắt nội dung tràn */
+    position: relative;
+}
+
+/* Che 2 mép trái/phải bằng gradient fade */
+.trusted-bar::before,
+.trusted-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trusted-bar::before {
+    left: 0;
+    background: linear-gradient(to right, var(--clr-dark-2), transparent);
+}
+
+.trusted-bar::after {
+    right: 0;
+    background: linear-gradient(to left, var(--clr-dark-2), transparent);
+}
+
+/* Track chứa 2 bản copy – chạy từ 0 đến -50% */
+.trusted-bar__track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 28s linear infinite;
+}
+
+/* Dừng khi hover – dễ đọc hơn */
+.trusted-bar:hover .trusted-bar__track {
+    animation-play-state: paused;
+}
+
+/* Mỗi bản copy nội dung */
+.trusted-bar__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-xl);
+    padding: 0 var(--sp-xl);
+    flex-shrink: 0;
+}
+
+.trusted-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--clr-white-dim);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    white-space: nowrap;    /* không xuống dòng */
+}
+
+.trusted-bar__item i {
+    color: var(--clr-brand);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Keyframe: dịch chuyển đúng 1 bản copy (50%) */
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ─── SERVICES: nền trắng, 3 cột cards ─── */
+.services {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.services__wrapper {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+}
+
+/* ─── WHY: nền soft, 2 cột (text | stats) ─── */
+.why {
+    background-color: var(--clr-bg-soft);
+    padding: var(--sp-3xl) var(--sp-md);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.why__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.why__stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-md);
+    position: sticky;
+    top: calc(var(--header-h) + var(--sp-md));
+}
+
+/* ─── HOW-IT-WORKS: nền cam gradient ─── */
+.how-it-works {
+    background: linear-gradient(135deg, var(--clr-brand) 0%, var(--clr-brand-dark) 100%);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.how-it-works__wrapper {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.how-it-works__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-lg);
+    margin-top: var(--sp-2xl);
+}
+
+.step-card {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.step-card__num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.18);
+    border: 2px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: #fff;
+    margin: 0 auto var(--sp-md);
+}
+
+.step-card__icon {
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: var(--sp-sm);
+}
+
+.step-card__title {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: var(--sp-xs);
+}
+
+.step-card__desc {
+    font-size: var(--fs-sm);
+    color: var(--clr-white-dim);
+    line-height: 1.6;
+}
+
+/* ─── AREA: 2 cột (bản đồ | danh sách) ─── */
+.area {
+    background-color: var(--clr-bg);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.area__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.area__map {
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    height: 420px;
+    border: 1px solid var(--clr-border);
+    box-shadow: var(--sh-sm);
+}
+
+.area__map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.area__cta {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-md);
+    flex-wrap: wrap;
+    margin-top: var(--sp-xl);
+}
+
+/* ─── REVIEWS: nền muted, 3 cột ─── */
+.reviews {
+    background-color: var(--clr-bg-muted);
+    padding: var(--sp-3xl) var(--sp-md);
+}
+
+.reviews__wrapper {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-lg);
+}
+
+/* ─── (CTA Banner đã chuyển sang css/components/_cta-banner.css) ─── */
