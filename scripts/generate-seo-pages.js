@@ -8,7 +8,11 @@ const site = 'https://laihokichbinhbmt24h.com';
 const phone = '0849 813 813';
 const tel = '0849813813';
 const email = 'info@laihokichbinhbmt24h.com';
-const titlePhoneSuffix = ' - 0849 813 813 - 0849 819 819';
+const lastmod = '2026-05-23';
+
+function withBrand(title) {
+    return title.includes('Lái Hộ BMT') ? title : `${title} - Lái Hộ BMT`;
+}
 
 const landingPages = [
     {
@@ -301,12 +305,12 @@ function head({ title, description, canonical, image, schema, ogType = 'website'
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="${ogType}">
     <meta property="og:site_name" content="Lái Hộ BMT">
-    <meta property="og:title" content="${title}${titlePhoneSuffix}">
+    <meta property="og:title" content="${withBrand(title)}">
     <meta property="og:description" content="${description}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${site}/assets/images/${image}">
     <meta name="twitter:card" content="summary_large_image">
-    <title>${title} – Lái Hộ BMT${titlePhoneSuffix}</title>
+    <title>${withBrand(title)}</title>
     <script type="application/ld+json">
     ${JSON.stringify(schema, null, 8)}
     </script>
@@ -718,7 +722,7 @@ write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(([url, changefreq, priority]) => `    <url>
         <loc>${site}${url}</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>${lastmod}</lastmod>
         <changefreq>${changefreq}</changefreq>
         <priority>${priority}</priority>
     </url>`).join('\n')}
