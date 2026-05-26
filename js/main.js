@@ -14,6 +14,9 @@ const Phone = {
         document.querySelectorAll('.js-zalo-link').forEach(el => {
             el.href = zalo;
         });
+        document.querySelectorAll('.js-zalo-text').forEach(el => {
+            el.textContent = CONFIG.zaloDisplay;
+        });
     },
 };
 
