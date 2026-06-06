@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-5WXDDNWM");</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Taxi điện BMT và dịch vụ đặt taxi Buôn Ma Thuột tiết kiệm, xe đời mới, tài xế địa phương, tư vấn xe phù hợp qua Zalo 0849 813 813.">
@@ -61,18 +68,26 @@
                         "mainEntity": [
                                 {
                                         "@type": "Question",
-                                        "name": "Có đặt được taxi điện BMT không?",
+                                        "name": "Taxi điện BMT có đắt hơn taxi thường không?",
                                         "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Bạn nên gọi hoặc nhắn Zalo để tổng đài kiểm tra xe phù hợp gần nhất tại thời điểm đặt."
+                                                "text": "Không. Cước taxi điện tương đương taxi xăng cùng loại, lợi thế là chạy êm và sạch hơn. Gọi 0849 819 819 để báo giá."
                                         }
                                 },
                                 {
                                         "@type": "Question",
-                                        "name": "Taxi điện BMT có đi sân bay không?",
+                                        "name": "Làm sao đặt được xe điện?",
                                         "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Nếu có xe phù hợp, tổng đài sẽ tư vấn chuyến đi sân bay; trường hợp khác sẽ gợi ý xe 4 chỗ hoặc 7 chỗ thay thế."
+                                                "text": "Khi gọi tổng đài, bạn nói rõ muốn đi xe điện. Số lượng xe điện có hạn nên đặt trước sẽ chắc chắn hơn."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Xe điện có chạy tuyến xa, đi huyện không?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Có thể, tùy quãng đường và trạm sạc. Với tuyến rất xa, tổng đài sẽ tư vấn xe phù hợp nhất."
                                         }
                                 }
                         ]
@@ -92,6 +107,11 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WXDDNWM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="overlay"></div>
 
 <header class="header" id="header">
@@ -199,12 +219,12 @@
             <div class="about-intro__text fade-in">
                 <div class="badge">Taxi điện BMT</div>
                 <h2 class="section-heading__title" id="landing-title">Taxi điện BMT</h2>
-                <p>Khách tìm taxi điện BMT thường cần xe sạch, tiết kiệm và di chuyển trong nội thành Buôn Ma Thuột. Tổng đài hỗ trợ tư vấn loại xe phù hợp theo từng thời điểm.</p>
+                <p>Dịch vụ <strong>taxi điện BMT</strong> dùng xe ô tô điện đời mới chạy êm, không mùi xăng dầu, không tiếng ồn động cơ — mang lại trải nghiệm sạch sẽ, thân thiện môi trường khi di chuyển trong Buôn Ma Thuột. Có xe điện 4 chỗ và xe điện cỡ lớn theo nhu cầu.</p>
                 <ul class="footer__col-list" role="list" style="margin: 1.5rem 0 0;">
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Tư vấn xe phù hợp cho chuyến đi ngắn trong nội thành</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Hỗ trợ taxi 4 chỗ, 7 chỗ và xe đời mới</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Phù hợp đi khách sạn, quán cà phê, bệnh viện, sân bay</li>
-                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Gọi 0849 819 819, Zalo 0849 813 813 để kiểm tra xe gần nhất</li>
+                    <li><i class="fa-solid fa-check" aria-hidden="true"></i>Xe điện êm, sạch, không mùi xăng dầu</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Thân thiện môi trường, phù hợp gia đình có trẻ</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Đón nhanh trong nội thành Buôn Ma Thuột</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Cước rõ ràng, đặt qua tổng đài 24/7</li>
                 </ul>
                 <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a class="btn btn--primary js-phone-link" href="tel:0849819819">
@@ -224,23 +244,57 @@
         <div style="max-width: var(--max-w); margin: 0 auto;">
             <div class="section-heading section-heading--center fade-in">
                 <div class="badge">Thông tin dịch vụ</div>
-                <h2 class="section-heading__title" id="detail-title">Tư vấn đặt taxi điện bmt</h2>
+                <h2 class="section-heading__title" id="detail-title">Tư vấn đặt Taxi điện BMT</h2>
                 <p class="section-heading__sub">Nội dung được viết riêng cho nhu cầu tìm kiếm tại Buôn Ma Thuột và Đắk Lắk.</p>
             </div>
             <div class="features-grid">
                 
+                
                 <article class="feature-card fade-in">
-                    <h2 class="feature-card__title">Nhu cầu taxi điện BMT</h2>
-                    <p class="feature-card__desc">Taxi điện BMT là nhóm từ khóa khách thường tìm khi muốn di chuyển tiết kiệm, sạch sẽ và êm trong thành phố. Tình trạng xe cụ thể phụ thuộc thời điểm đặt, tổng đài sẽ tư vấn lựa chọn phù hợp nhất.</p>
+                    <h2 class="feature-card__title">Trải nghiệm di chuyển êm ái</h2>
+                    <p class="feature-card__desc">Xe điện gần như không rung và không ồn, khoang xe sạch, không mùi nhiên liệu — dễ chịu cho người say xe, trẻ nhỏ và người lớn tuổi.</p>
                 </article>
                 <article class="feature-card fade-in">
-                    <h2 class="feature-card__title">Đặt taxi nội thành Buôn Ma Thuột</h2>
-                    <p class="feature-card__desc">Khách có thể đặt xe đi nội thành, sân bay, bến xe, bệnh viện, khách sạn hoặc các điểm du lịch gần Buôn Ma Thuột. Trước khi đi, tài xế xác nhận điểm đón, điểm trả và chi phí dự kiến.</p>
+                    <h2 class="feature-card__title">Lựa chọn xanh cho thành phố</h2>
+                    <p class="feature-card__desc">Không phát thải khí xả tại chỗ, taxi điện góp phần giảm ô nhiễm không khí ở khu trung tâm đông đúc của Buôn Ma Thuột.</p>
                 </article>
                 <article class="feature-card fade-in">
-                    <h2 class="feature-card__title">Không chỉ taxi điện</h2>
-                    <p class="feature-card__desc">Ngoài nhu cầu taxi điện bmt, tổng đài còn hỗ trợ taxi 4 chỗ Buôn Ma Thuột, taxi 7 chỗ Buôn Ma Thuột, taxi sân bay Buôn Ma Thuột và xe hợp đồng Đắk Lắk.</p>
+                    <h2 class="feature-card__title">Đặt xe điện dễ như taxi thường</h2>
+                    <p class="feature-card__desc">Gọi 0849 819 819 và yêu cầu xe điện, tổng đài điều xe gần bạn nhất. Dùng cho đi làm, đi sân bay hay đưa đón hằng ngày.</p>
                 </article>
+            
+            </div>
+
+            <div class="section-heading section-heading--center fade-in" style="margin-top: 3rem;">
+                <h2 class="section-heading__title">Giá taxi điện BMT</h2>
+                <p class="section-heading__sub">Cước tương đương taxi thường, tham khảo bên dưới. Gọi 0849 819 819 để báo chính xác.</p>
+            </div>
+            <div style="overflow-x:auto; margin-top:1.5rem;">
+                <table style="width:100%; border-collapse:collapse; min-width:520px;">
+                    <thead><tr style="background:#f5f5f5;">
+                        <th style="border:1px solid #ddd; padding:12px; text-align:left;">Hạng mục</th>
+                        <th style="border:1px solid #ddd; padding:12px;">Xe 4 chỗ</th>
+                        <th style="border:1px solid #ddd; padding:12px;">Xe 7 chỗ</th>
+                    </tr></thead>
+                    <tbody>
+                        <tr>
+                            <td style="border:1px solid #ddd; padding:12px;">Giá mở cửa (0,6km đầu)</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">~12.000đ</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">~13.000đ</td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid #ddd; padding:12px;">Cước mỗi km nội thành</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">~13.000–16.000đ</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">~14.000–17.000đ</td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid #ddd; padding:12px;">Tuyến xa / sân bay</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">báo trọn gói</td>
+                            <td style="border:1px solid #ddd; padding:12px; text-align:center;">báo trọn gói</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="section-heading__sub" style="margin-top:1rem; font-size:0.9rem;">* Giá tham khảo. Số lượng xe điện có hạn theo khung giờ, nên đặt trước để chủ động.</p>
             </div>
         </div>
     </section>
@@ -253,14 +307,20 @@
             </div>
             <div class="features-grid">
                 
+                
                 <article class="feature-card fade-in">
-                    <h3 class="feature-card__title">Có đặt được taxi điện BMT không?</h3>
-                    <p class="feature-card__desc">Bạn nên gọi hoặc nhắn Zalo để tổng đài kiểm tra xe phù hợp gần nhất tại thời điểm đặt.</p>
+                    <h3 class="feature-card__title">Taxi điện BMT có đắt hơn taxi thường không?</h3>
+                    <p class="feature-card__desc">Không. Cước taxi điện tương đương taxi xăng cùng loại, lợi thế là chạy êm và sạch hơn. Gọi 0849 819 819 để báo giá.</p>
                 </article>
                 <article class="feature-card fade-in">
-                    <h3 class="feature-card__title">Taxi điện BMT có đi sân bay không?</h3>
-                    <p class="feature-card__desc">Nếu có xe phù hợp, tổng đài sẽ tư vấn chuyến đi sân bay; trường hợp khác sẽ gợi ý xe 4 chỗ hoặc 7 chỗ thay thế.</p>
+                    <h3 class="feature-card__title">Làm sao đặt được xe điện?</h3>
+                    <p class="feature-card__desc">Khi gọi tổng đài, bạn nói rõ muốn đi xe điện. Số lượng xe điện có hạn nên đặt trước sẽ chắc chắn hơn.</p>
                 </article>
+                <article class="feature-card fade-in">
+                    <h3 class="feature-card__title">Xe điện có chạy tuyến xa, đi huyện không?</h3>
+                    <p class="feature-card__desc">Có thể, tùy quãng đường và trạm sạc. Với tuyến rất xa, tổng đài sẽ tư vấn xe phù hợp nhất.</p>
+                </article>
+            
             </div>
         </div>
     </section>
