@@ -17,6 +17,21 @@ function withBrand(title) {
     return `${title} - Gọi 0849 819 819`;
 }
 
+function formatMeta(description) {
+    let desc = description;
+    // Nếu có Zalo, thay bằng số điện thoại chính (vì title đã có)
+    if (desc.includes(zaloPhone)) {
+        desc = desc.replace(zaloPhone, phone);
+    }
+    // Nếu vẫn không có số điện thoại chính, thêm vào
+    if (!desc.includes(phone)) {
+        const maxLen = 155;
+        const withPhone = `${desc.replace(/\.$/, '')} Gọi ${phone}.`;
+        return withPhone.length > maxLen ? withPhone.substring(0, maxLen - 1) + '.' : withPhone;
+    }
+    return desc;
+}
+
 function heroTitle(title) {
     const parts = title.split(' - ');
     if (parts.length > 1) {
@@ -803,15 +818,16 @@ function escapeJson(value) {
 }
 
 function head({ title, description, canonical, image, schema, ogType = 'website' }) {
+    const formattedDescription = formatMeta(description);
     return `    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="${description}">
+    <meta name="description" content="${formattedDescription}">
     <link rel="canonical" href="${canonical}">
     <meta property="og:locale" content="vi_VN">
     <meta property="og:type" content="${ogType}">
     <meta property="og:site_name" content="Tổng Đài Taxi BMT">
     <meta property="og:title" content="${withBrand(title)}">
-    <meta property="og:description" content="${description}">
+    <meta property="og:description" content="${formattedDescription}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${site}/assets/images/${image}">
     <meta name="twitter:card" content="summary_large_image">
