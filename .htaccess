@@ -1,0 +1,26 @@
+# ============================================================
+#  Tổng Đài Taxi BMT - cấu hình SEO
+# ============================================================
+
+Options -Indexes
+DirectoryIndex index.html
+
+# --- 301 redirect: gộp các trang trùng lặp về trang chủ lực ---
+# Nhóm taxi tổng
+Redirect 301 /pages/taxi-bmt.html /pages/taxi-buon-ma-thuot.html
+Redirect 301 /pages/taxi-buon-ma-thuot-24-7.html /pages/taxi-buon-ma-thuot.html
+Redirect 301 /pages/tong-dai-taxi-buon-ma-thuot-24h.html /pages/taxi-buon-ma-thuot.html
+Redirect 301 /pages/taxi-dem-buon-ma-thuot.html /pages/taxi-buon-ma-thuot.html
+Redirect 301 /pages/taxi-dak-lak.html /pages/taxi-buon-ma-thuot.html
+
+# Nhóm sân bay
+Redirect 301 /pages/taxi-buon-ma-thuot-di-san-bay.html /pages/taxi-san-bay-buon-ma-thuot.html
+Redirect 301 /pages/uu-dai-don-san-bay-buon-ma-thuot.html /pages/taxi-san-bay-buon-ma-thuot.html
+
+# Nhóm tuyến / hợp đồng / tin
+Redirect 301 /pages/mo-rong-ea-hleo-ea-kar.html /pages/taxi-buon-ma-thuot-di-ea-kar.html
+Redirect 301 /pages/xe-hop-dong-doanh-nghiep-dak-lak.html /pages/xe-hop-dong-bmt.html
+Redirect 301 /pages/taxi-duoc-yeu-thich-dak-lak-2025.html /pages/news.html
+
+# --- Trang lỗi ---
+ErrorDocument 404 /index.html

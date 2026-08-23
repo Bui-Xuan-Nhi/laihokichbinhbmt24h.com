@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(awk '/^[0-9]/{n=$0} /^[<>]/{print}')",
+      "Bash(grep -v '^ *$')"
+    ]
+  }
+}

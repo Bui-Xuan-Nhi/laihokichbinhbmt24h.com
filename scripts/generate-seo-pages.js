@@ -10,10 +10,25 @@ const tel = '0849819819';
 const zaloPhone = '0849 813 813';
 const zaloTel = '0849813813';
 const email = 'info@laihokichbinhbmt24h.com';
-const lastmod = '2026-05-26';
+const lastmod = '2026-06-04';
 
 function withBrand(title) {
-    return title.includes('Tổng Đài Taxi BMT') ? title : `${title} - Tổng Đài Taxi BMT`;
+    if (title.includes('0849')) return title; // đã có số điện thoại
+    return `${title} - Gọi 0849 819 819`;
+}
+
+function heroTitle(title) {
+    const parts = title.split(' - ');
+    if (parts.length > 1) {
+        return `${parts[0]} <span>${parts.slice(1).join(' - ')}</span>`;
+    }
+
+    const match = title.match(/^(Taxi|Thuê xe|Xe hợp đồng|Lái hộ|Tổng đài)\s+(.+)$/i);
+    if (match) {
+        return `${match[1]} <span>${match[2]}</span>`;
+    }
+
+    return title;
 }
 
 const landingPages = [
@@ -559,6 +574,143 @@ const landingPages = [
     }
 ];
 
+const bmtAreaPages = [
+    {
+        slug: 'taxi-phuong-buon-ma-thuot.html',
+        area: 'phường Buôn Ma Thuột',
+        short: 'Phường Buôn Ma Thuột',
+        image: 'banner-hero.jpg',
+        note: 'Phù hợp khách ở khu vực trung tâm sau sắp xếp hành chính, gồm nhiều khu dân cư, cơ quan, khách sạn và điểm thương mại lớn.',
+        nearby: 'Trường Chinh, Lê Duẩn, Nguyễn Tất Thành, trung tâm hành chính và các tuyến nội thành'
+    },
+    {
+        slug: 'taxi-tan-an-buon-ma-thuot.html',
+        area: 'khu vực Tân An Buôn Ma Thuột',
+        short: 'Tân An',
+        image: 'taxi-4-cho.jpg',
+        note: 'Tân An là khu vực có nhu cầu taxi nội thành, đi sân bay, đi bệnh viện và đặt xe ban đêm khá thường xuyên.',
+        nearby: 'Tân An, các khu dân cư phía Bắc thành phố, tuyến đi sân bay và trung tâm Buôn Ma Thuột'
+    },
+    {
+        slug: 'taxi-tan-loi-buon-ma-thuot.html',
+        area: 'khu vực Tân Lợi Buôn Ma Thuột',
+        short: 'Tân Lợi',
+        image: 'taxi-7-cho.jpg',
+        note: 'Tân Lợi là khu vực trung tâm, gần nhiều cơ quan, khách sạn, quán cà phê và tuyến đường lớn nên khách thường cần xe nhanh.',
+        nearby: 'Tân Lợi, Trường Chinh, Nguyễn Tất Thành, trung tâm Buôn Ma Thuột'
+    },
+    {
+        slug: 'taxi-ea-tam-buon-ma-thuot.html',
+        area: 'khu vực Ea Tam Buôn Ma Thuột',
+        short: 'Ea Tam',
+        image: 'banner-about.jpg',
+        note: 'Ea Tam có nhiều khu dân cư, trường học và điểm dịch vụ; phù hợp đặt taxi đi làm, đi học, đi khám bệnh hoặc đi sân bay.',
+        nearby: 'Ea Tam, Lê Duẩn, khu dân cư phía Nam trung tâm và tuyến đi Hòa Thắng'
+    },
+    {
+        slug: 'taxi-tan-hoa-buon-ma-thuot.html',
+        area: 'khu vực Tân Hòa Buôn Ma Thuột',
+        short: 'Tân Hòa',
+        image: 'taxi-4-cho.jpg',
+        note: 'Tân Hòa nằm gần các tuyến ra vào thành phố, phù hợp khách cần taxi đi bến xe, sân bay, nội thành hoặc đi huyện.',
+        nearby: 'Tân Hòa, bến xe, các tuyến kết nối nội thành và ngoại thành Buôn Ma Thuột'
+    },
+    {
+        slug: 'taxi-thanh-nhat-buon-ma-thuot.html',
+        area: 'khu vực Thành Nhất Buôn Ma Thuột',
+        short: 'Thành Nhất',
+        image: 'taxi-7-cho.jpg',
+        note: 'Thành Nhất phù hợp các chuyến taxi nội thành, đi sân bay, đi bệnh viện và xe gia đình 7 chỗ cho khách có nhiều hành lý.',
+        nearby: 'Thành Nhất, khu dân cư phía Tây thành phố, tuyến đi Buôn Đôn'
+    },
+    {
+        slug: 'taxi-ea-tu-buon-ma-thuot.html',
+        area: 'khu vực Ea Tu Buôn Ma Thuột',
+        short: 'Ea Tu',
+        image: 'banner-service.jpg',
+        note: 'Ea Tu có nhu cầu taxi đi trung tâm, đi sân bay, đi chợ, đi bệnh viện và các tuyến liên huyện trong tỉnh Đắk Lắk.',
+        nearby: 'Ea Tu, khu Đông Buôn Ma Thuột, tuyến đi Ea Kar và Quốc lộ 26'
+    },
+    {
+        slug: 'taxi-hoa-thang-buon-ma-thuot.html',
+        area: 'khu vực Hòa Thắng Buôn Ma Thuột',
+        short: 'Hòa Thắng',
+        image: 'banner-service.jpg',
+        note: 'Hòa Thắng gần sân bay Buôn Ma Thuột nên phù hợp khách cần taxi sân bay, đưa đón người thân hoặc đặt xe về trung tâm.',
+        nearby: 'Hòa Thắng, sân bay Buôn Ma Thuột, tuyến vào trung tâm thành phố'
+    },
+    {
+        slug: 'taxi-hoa-phu-buon-ma-thuot.html',
+        area: 'khu vực Hòa Phú Buôn Ma Thuột',
+        short: 'Hòa Phú',
+        image: 'taxi-9-cho.jpg',
+        note: 'Hòa Phú phù hợp khách đặt xe đi trung tâm, đi công việc, thuê xe 7 chỗ hoặc xe hợp đồng theo ngày.',
+        nearby: 'Hòa Phú, tuyến phía Nam Buôn Ma Thuột, các khu dân cư và khu công nghiệp lân cận'
+    },
+    {
+        slug: 'taxi-hoa-xuan-buon-ma-thuot.html',
+        area: 'khu vực Hòa Xuân Buôn Ma Thuột',
+        short: 'Hòa Xuân',
+        image: 'taxi-7-cho.jpg',
+        note: 'Hòa Xuân thường có nhu cầu taxi về trung tâm, đi sân bay, đi huyện hoặc thuê xe cho gia đình và nhóm nhỏ.',
+        nearby: 'Hòa Xuân, phía Nam Buôn Ma Thuột, các tuyến về trung tâm và Quốc lộ 27'
+    },
+    {
+        slug: 'taxi-hoa-khanh-buon-ma-thuot.html',
+        area: 'khu vực Hòa Khánh Buôn Ma Thuột',
+        short: 'Hòa Khánh',
+        image: 'taxi-4-cho.jpg',
+        note: 'Hòa Khánh phù hợp khách cần taxi 4 chỗ, 7 chỗ, xe đi sân bay và xe gia đình theo lịch trình riêng.',
+        nearby: 'Hòa Khánh, tuyến phía Nam thành phố và các khu vực giáp Hòa Phú, Hòa Xuân'
+    },
+    {
+        slug: 'taxi-cu-ebur-buon-ma-thuot.html',
+        area: 'khu vực Cư Êbur Buôn Ma Thuột',
+        short: 'Cư Êbur',
+        image: 'taxi-7-cho.jpg',
+        note: 'Cư Êbur là khu vực cửa ngõ phía Bắc, phù hợp đặt taxi đi trung tâm, đi sân bay, đi Buôn Đôn hoặc đi các huyện lân cận.',
+        nearby: 'Cư Êbur, phía Bắc Buôn Ma Thuột, tuyến đi Buôn Đôn và các khu dân cư lân cận'
+    }
+];
+
+landingPages.push(...bmtAreaPages.map(createAreaLanding));
+
+function createAreaLanding(areaPage) {
+    return {
+        slug: areaPage.slug,
+        title: `Taxi ${areaPage.short} Buôn Ma Thuột`,
+        meta: `Taxi ${areaPage.short} Buôn Ma Thuột 24/7, đặt xe nhanh tại ${areaPage.area}, taxi 4 chỗ, 7 chỗ, đi sân bay và nội thành.`,
+        image: areaPage.image,
+        eyebrow: `Taxi ${areaPage.short}`,
+        lead: `Dịch vụ taxi tại ${areaPage.area} hỗ trợ đặt xe nhanh qua hotline ${phone} hoặc Zalo ${zaloPhone}, phục vụ nội thành, sân bay và các tuyến Đắk Lắk.`,
+        bullets: [
+            `Đón khách tại ${areaPage.area}`,
+            'Có taxi 4 chỗ, 7 chỗ theo số khách và hành lý',
+            'Nhận đi sân bay Buôn Ma Thuột, bệnh viện, bến xe và trung tâm',
+            `Gọi ${phone} hoặc nhắn Zalo ${zaloPhone} để đặt xe`
+        ],
+        sections: [
+            {
+                heading: `Đặt taxi tại ${areaPage.short}`,
+                text: `${areaPage.note} Khi đặt xe, khách nên gửi điểm đón cụ thể, điểm đến, số khách và thời gian cần đi để tổng đài bố trí xe phù hợp.`
+            },
+            {
+                heading: 'Các tuyến thường gặp',
+                text: `Từ ${areaPage.area}, khách thường đặt taxi đi trung tâm Buôn Ma Thuột, sân bay Buôn Ma Thuột, bệnh viện, bến xe, khách sạn, quán cà phê hoặc các tuyến đi Buôn Đôn, Hồ Lắk, Ea Kar và các huyện Đắk Lắk.`
+            },
+            {
+                heading: 'Khu vực đón gần bạn',
+                text: `Tổng Đài Taxi BMT hỗ trợ đón tại ${areaPage.nearby}. Nếu vị trí khó tìm, khách có thể gửi định vị qua Zalo ${zaloPhone} để tài xế đến đúng điểm hẹn.`
+            }
+        ],
+        faqs: [
+            [`Taxi ${areaPage.short} có hoạt động 24/7 không?`, `Có. Tổng Đài Taxi BMT nhận đặt taxi tại ${areaPage.area} cả ngày và đêm, bao gồm sáng sớm, tối muộn, cuối tuần và ngày lễ.`],
+            [`Gọi taxi ${areaPage.short} qua số nào?`, `Bạn gọi ${phone} để đặt xe nhanh hoặc nhắn Zalo ${zaloPhone} để gửi vị trí đón và điểm đến.`],
+            [`Taxi ${areaPage.short} có đi sân bay không?`, 'Có. Dịch vụ nhận đưa đón sân bay Buôn Ma Thuột bằng xe 4 chỗ, 7 chỗ hoặc xe theo lịch trình riêng.']
+        ]
+    };
+}
+
 const articles = [
     {
         slug: 'uu-dai-don-san-bay-buon-ma-thuot.html',
@@ -920,7 +1072,7 @@ ${head({ title: page.title, description: page.meta, canonical, image: page.image
 ${header('service')}
 
 <main>
-    ${pageHero(page.title.replace(' ', ' <span>') + '</span>', page.image, ['Dịch vụ', page.eyebrow])}
+    ${pageHero(heroTitle(page.title), page.image, ['Dịch vụ', page.eyebrow])}
 
     <section class="about-intro" aria-labelledby="landing-title">
         <div class="about-intro__inner">
@@ -952,7 +1104,7 @@ ${header('service')}
         <div style="max-width: var(--max-w); margin: 0 auto;">
             <div class="section-heading section-heading--center fade-in">
                 <div class="badge">Thông tin dịch vụ</div>
-                <h2 class="section-heading__title" id="detail-title">Tư vấn đặt ${page.eyebrow.toLowerCase()}</h2>
+                <h2 class="section-heading__title" id="detail-title">Tư vấn đặt ${page.eyebrow}</h2>
                 <p class="section-heading__sub">Nội dung được viết riêng cho nhu cầu tìm kiếm tại Buôn Ma Thuột và Đắk Lắk.</p>
             </div>
             <div class="features-grid">
@@ -1033,7 +1185,7 @@ ${head({ title: article.title, description: article.description, canonical, imag
 ${header('news')}
 
 <main>
-    ${pageHero(article.title.replace(' ', ' <span>') + '</span>', article.image, ['Tin tức', 'Bài viết'])}
+    ${pageHero(heroTitle(article.title), article.image, ['Tin tức', 'Bài viết'])}
 
     <section class="about-intro" aria-labelledby="article-title">
         <div class="about-intro__inner">
