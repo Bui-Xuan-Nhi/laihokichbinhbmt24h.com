@@ -18,17 +18,34 @@ function withBrand(title) {
 }
 
 function formatMeta(description) {
+    const maxLen = 155;
     let desc = description;
+
     // Nếu có Zalo, thay bằng số điện thoại chính (vì title đã có)
     if (desc.includes(zaloPhone)) {
         desc = desc.replace(zaloPhone, phone);
     }
-    // Nếu vẫn không có số điện thoại chính, thêm vào
+
+    // Nếu vẫn không có số điện thoại chính, thêm vào (nếu còn chỗ)
     if (!desc.includes(phone)) {
-        const maxLen = 155;
-        const withPhone = `${desc.replace(/\.$/, '')} Gọi ${phone}.`;
-        return withPhone.length > maxLen ? withPhone.substring(0, maxLen - 1) + '.' : withPhone;
+        const phoneText = `Gọi ${phone}.`;
+        // Chỉ thêm nếu description hiện tại < 130 ký tự
+        if (desc.length < 130) {
+            desc = `${desc.replace(/\.$/, '')} ${phoneText}`;
+        }
     }
+
+    // Cắt description nếu quá dài (tối ưu cho SEO)
+    if (desc.length > maxLen) {
+        // Tìm điểm cắt an toàn (không giữa từ)
+        let cut = desc.substring(0, maxLen);
+        let lastSpace = cut.lastIndexOf(' ');
+        if (lastSpace > maxLen - 20) {
+            cut = desc.substring(0, lastSpace);
+        }
+        return cut.replace(/\s+$/, '') + '.';
+    }
+
     return desc;
 }
 
@@ -694,7 +711,7 @@ function createAreaLanding(areaPage) {
     return {
         slug: areaPage.slug,
         title: `Taxi ${areaPage.short} Buôn Ma Thuột`,
-        meta: `Taxi ${areaPage.short} Buôn Ma Thuột 24/7, đặt xe nhanh tại ${areaPage.area}, taxi 4 chỗ, 7 chỗ, đi sân bay và nội thành.`,
+        meta: `Taxi ${areaPage.short} Buôn Ma Thuột 24/7, đặt xe nhanh, taxi 4-7 chỗ, đi sân bay và nội thành.`,
         image: areaPage.image,
         eyebrow: `Taxi ${areaPage.short}`,
         lead: `Dịch vụ taxi tại ${areaPage.area} hỗ trợ đặt xe nhanh qua hotline ${phone} hoặc Zalo ${zaloPhone}, phục vụ nội thành, sân bay và các tuyến Đắk Lắk.`,
